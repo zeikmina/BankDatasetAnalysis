@@ -46,7 +46,7 @@ public class InsertionSort {
             }
             arr[j + 1] = key;
             counter++;
-            if (i % 10000 == 0) {
+            if (i % 100 == 0) {
                 System.out.println("...Insertion Sort progress: " + i + "/" + n);
             }
         }

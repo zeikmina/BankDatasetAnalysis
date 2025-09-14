@@ -50,7 +50,7 @@ public class SelectionSort {
                 arr[i] = temp;
                 counter += 3; // swap
             }
-            if (i % 10000 == 0) {
+            if (i % 100 == 0) {
                 System.out.println("...Selection Sort progress: " + i + "/" + n);
             }
         }

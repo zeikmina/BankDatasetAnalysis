@@ -38,7 +38,7 @@ public class BubbleSort {
         long counter = 0;
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
-            if (i % 10000 == 0) { // progress update every 10k passes
+            if (i % 100 == 0) { // progress update every 10k passes
                 System.out.println("...Bubble Sort pass " + i + "/" + (n - 1));
             }
             for (int j = 0; j < n - i - 1; j++) {
