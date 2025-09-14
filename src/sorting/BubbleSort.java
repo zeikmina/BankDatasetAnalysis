@@ -5,8 +5,11 @@ import java.util.*;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        // Default paths
-        String inputPath = "input/input.csv";
+
+        String inputPath = "input/average_case_bankdataset.csv";
+//        String inputPath = "input/best_case_bankdataset.csv";
+//        String inputPath = "input/worst_case_bankdataset.csv";
+
         String outputPath = "output/bubble_sorted.csv";
 
         // If user provides arguments, override
