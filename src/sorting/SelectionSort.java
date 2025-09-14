@@ -5,8 +5,10 @@ import java.util.*;
 
 public class SelectionSort {
     public static void main(String[] args) {
-        String inputPath = "input/average_case_bankdataset.csv";
-        String outputPath = "output/selection_sorted.csv";
+//        String inputPath = "input/average_case_bankdataset.csv";
+//        String inputPath = "input/best_case_bankdataset.csv";
+        String inputPath = "input/worst_case_bankdataset.csv";
+        String outputPath = "output/worst_case_scenario/selection_sorted.csv";
 
         if (args.length >= 2) {
             inputPath = args[0];
@@ -19,7 +21,7 @@ public class SelectionSort {
 
         Record[] arr = records.toArray(new Record[0]);
 
-        System.out.println("⚡ Starting Selection Sort...");
+        System.out.println("Starting Selection Sort...");
         long start = System.nanoTime();
         long counter = selectionSort(arr);
         long end = System.nanoTime();
@@ -28,7 +30,7 @@ public class SelectionSort {
         System.out.println("Selection Sort executed statements: " + counter);
         System.out.println("Execution time: " + ((end - start) / 1_000_000) + " ms");
 
-        System.out.println("💾 Writing sorted output to: " + outputPath);
+        System.out.println("Writing sorted output to: " + outputPath);
         writeCSV(arr, outputPath);
         System.out.println("File saved: " + outputPath);
     }

@@ -6,7 +6,9 @@ import java.util.*;
 public class BubbleSort {
     public static void main(String[] args) {
         String inputPath = "input/average_case_bankdataset.csv";
-        String outputPath = "output/bubble_sorted.csv";
+//        String inputPath = "input/best_case_bankdataset.csv";
+//        String inputPath = "input/worst_case_bankdataset.csv";
+        String outputPath = "output/average_case_scenario/bubble_sorted.csv";
 
         // If user provides arguments, override
         if (args.length >= 2) {
@@ -20,7 +22,7 @@ public class BubbleSort {
 
         Record[] arr = records.toArray(new Record[0]);
 
-        System.out.println("⚡ Starting Bubble Sort...");
+        System.out.println("Starting Bubble Sort...");
         long start = System.nanoTime();
         long counter = bubbleSort(arr);
         long end = System.nanoTime();
