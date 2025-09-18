@@ -50,7 +50,7 @@ public class SelectionSort {
                 Record temp = arr[minIndex];
                 arr[minIndex] = arr[i];
                 arr[i] = temp;
-                counter += 3; // swap
+                counter += 3;
             }
             if (i % 100 == 0) {
                 System.out.println("...Selection Sort progress: " + i + "/" + n);
@@ -62,7 +62,7 @@ public class SelectionSort {
     private static List<Record> readCSV(String filePath) {
         List<Record> records = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            br.readLine(); // skip header
+            br.readLine();
             String line;
             int count = 0;
             while ((line = br.readLine()) != null) {

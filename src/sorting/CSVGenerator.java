@@ -19,7 +19,7 @@ public class CSVGenerator {
         for (int i = 0; i < size; i++) {
             String date = "2025-01-" + String.format("%02d", (i % 30) + 1);
             String domain = "domain" + (i % 100) + ".com";
-            String location = "Location" + i; // unique per row
+            String location = "Location" + i;
             int value = (int) (Math.random() * 1000);
             int transactionCount = (int) (Math.random() * 100);
 
@@ -35,12 +35,12 @@ public class CSVGenerator {
             Collections.shuffle(records);
         }
 
-        // Write to CSV (no trailing blank lines)
+        // Write to CSV
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
             bw.write("date,domain,location,value,transaction_count\n");
             for (int i = 0; i < records.size(); i++) {
                 bw.write(records.get(i).toString());
-                if (i < records.size() - 1) { // no extra newline at the end
+                if (i < records.size() - 1) {
                     bw.newLine();
                 }
             }

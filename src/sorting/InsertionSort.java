@@ -21,7 +21,7 @@ public class InsertionSort {
 
         Record[] arr = records.toArray(new Record[0]);
 
-        System.out.println("⚡ Starting Insertion Sort...");
+        System.out.println("Starting Insertion Sort...");
         long start = System.nanoTime();
         long counter = insertionSort(arr);
         long end = System.nanoTime();
@@ -44,7 +44,7 @@ public class InsertionSort {
             while (j >= 0 && arr[j].getLocation().compareTo(key.getLocation()) > 0) {
                 arr[j + 1] = arr[j];
                 j--;
-                counter += 2; // comparison + shift
+                counter += 2;
             }
             arr[j + 1] = key;
             counter++;
@@ -58,7 +58,7 @@ public class InsertionSort {
     private static List<Record> readCSV(String filePath) {
         List<Record> records = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            br.readLine(); // skip header
+            br.readLine();
             String line;
             int count = 0;
             while ((line = br.readLine()) != null) {
